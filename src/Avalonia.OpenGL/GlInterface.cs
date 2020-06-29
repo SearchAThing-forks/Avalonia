@@ -322,6 +322,9 @@ namespace Avalonia.OpenGL
         [GlEntryPoint("glUniform1f")]
         public GlUniform1f Uniform1f { get; }
 
+        public delegate void GlUniform3f(int location, float v0, float v1, float v2);
+        [GlEntryPoint("glUniform3f")]
+        public GlUniform3f Uniform3f { get; }
         
         public delegate void GlUniformMatrix4fv(int location, int count, bool transpose, void* value);
         [GlEntryPoint("glUniformMatrix4fv")]
