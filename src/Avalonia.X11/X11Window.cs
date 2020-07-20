@@ -86,6 +86,7 @@ namespace Avalonia.X11
 
             // OpenGL seems to be do weird things to it's current window which breaks resize sometimes
             _useRenderWindow = glfeature != null;
+            _useRenderWindow = false; // could related https://github.com/AvaloniaUI/Avalonia/issues/3536
             
             var glx = glfeature as GlxGlPlatformFeature;
             if (glx != null)
